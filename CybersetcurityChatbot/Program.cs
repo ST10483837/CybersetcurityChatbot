@@ -10,6 +10,7 @@ namespace CybersecurityChatbot
 
             AudioPlayer audioPlayer = new AudioPlayer();
             User user = new User();
+            Chatbot chatbot = new Chatbot();
 
             audioPlayer.PlayGreeting();
 
@@ -18,7 +19,10 @@ namespace CybersecurityChatbot
             user.SetName(userName);
 
             Console.WriteLine(user.GetPersonalizedGreeting());
-            Console.WriteLine($"Nice to meet you, {user.Name}!");
+
+            // Test the chatbot
+            Console.WriteLine("\n" + chatbot.GetResponse("how are you"));
+            Console.WriteLine("\n" + chatbot.GetResponse("what is phishing"));
 
             Console.WriteLine("\nPress any key to exit...");
             Console.ReadKey();
