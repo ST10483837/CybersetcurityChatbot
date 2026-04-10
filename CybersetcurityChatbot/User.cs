@@ -6,12 +6,10 @@ namespace CybersecurityChatbot
     {
         // Automatic property (required by rubric)
         public string Name { get; private set; }
-        public int QuestionsAsked { get; set; }
 
         public User()
         {
             Name = "Guest";
-            QuestionsAsked = 0;
         }
 
         public void SetName(string name)
@@ -22,9 +20,9 @@ namespace CybersecurityChatbot
             }
         }
 
-        public string GetPersonalizedMessage(string message)
+        public string GetPersonalizedGreeting()
         {
-            return $"{Name}, {message}";
+            return $"Hello, {Name}! Welcome to the Cybersecurity Awareness Bot.";
         }
     }
 }
