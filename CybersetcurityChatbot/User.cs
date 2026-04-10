@@ -4,6 +4,8 @@ namespace CybersecurityChatbot
 {
     public class User
     {
+        internal int QuestionsAsked;
+
         // Automatic property (required by rubric)
         public string Name { get; private set; }
 
